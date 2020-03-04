@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*  Excercie 1 :
+.container{
+  display: flex;
+  background: yellow;
+  height: 400px;
+  align-items: center;
+}
+*/
+/*   Excercie 2
+.container{
+display: flex;
+background: yellow;
+height: 400px;
+align-items: center;
+justify-content: space-between;
+} */
+
+.container{
+  display: flex;
+  background: yellow;
+  height: 400px;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
+.item{
+  height: 100px;
+  width: 100px;
+  background: purple;
+  margin-left: 5px;
+}
