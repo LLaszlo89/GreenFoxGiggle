@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+}
+body{
+  background: paleturquoise;
+}
+
+.albert{
+  display: flex;
+  background: palegreen;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+img{
+  margin-left: 200px;}
+q{
+  font-family: 'Dancing Script', cursive;;
+}
+#content{
+  height: 200px;
+  max-width: 300px;
+  overflow: hidden;
+  background:greenyellow;
+}
+#content.open{
+  max-height: 1000px;
+}
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: blue;
+  color: gold;
+  width: 200px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 25px ;
+}
