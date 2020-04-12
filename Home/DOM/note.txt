@@ -1,0 +1,105 @@
+document.getEl ...    document is the whole html structure
+
+// good practice use :
+document.querySelector(); OR  document.querySelectorAll(); 
+
+const wmf = document.querySelector("#book-list li:nth-child(2) .name");
+// This allows us to go into the element with the id #book-list, access the second child of the li with class name. 
+
+
+const books = document.querySelectorAll("#book-list li .name");
+// Iterating over node list returned by querySelectorAll:
+
+// To loop: 
+    books.forEach(function(book){
+      console.log(book);
+    })
+
+// Using  document.getElementsByClassName()  OR  ...TagName()   gives us html collection 
+We need to make the collection to an array so we can loop throw: 
+      
+      Array.from(books).forEach(function(book){
+        console.log(book);
+        console.log(book.textContent);  Logging text only
+        book.textContent = "This is a test" ;  Replacing text content
+        book.textContent += "This is a test";     append text
+        bookList.innerHTML += '<h2>This is how you add HTML</h2>';   add new element
+
+      })
+
+  
+
+// To find parent node
+
+    const bookList = document.querySelector("#book-list");
+    console.log('the parent node is ', bookList.parentNode);
+
+// To find node children 
+
+    console.log(bookList.children);
+
+
+
+// To find element sibling:
+
+      const bookList = document.querySelector("#book-list");
+
+      console.log('book-list next element sibling is: ', bookList.nextElementSibling);
+
+// EVENT LISTENERS  add one by one
+
+      const btns = document.querySelectorAll('#book-list .delete');
+
+      btns.forEach(function(btn){
+        btn.addEventListener('click', function(e){
+
+          const li = e.target.parentElement;
+          li.parentNode.removeChild(li);
+
+        })
+      })
+
+
+// PREVENTING DEFAULT BEHAVIOR 
+
+      const link = document.querySelector('#page-banner a');
+
+      link.addEventListener('click', function(e){
+        e.preventDefault();
+        console.log('Navigation to ', e.target.textContent, ' was prevented');
+      });
+
+
+// Attaching event listeners to the ul instead of each li for efficiency
+    
+        const list = document.querySelector('#book-list ul');
+
+        // delete books
+
+        list.addEventListener('click', function(e){
+          if (e.target.className == 'delete'){
+            const li = e.target.parentElement;
+            list.removeChild(li);  OR  li.parentNode.removeChild(li);
+          }
+        })
+
+
+
+        // Query the DOM for form elements:
+
+        document.forms // Returns a HTML collection
+
+        document.forms[0] // Accesses the first form element 
+
+        document.forms['add-book'] // Access the form with id #add-book
+
+        
+        // Add book list
+
+            const addForm = document.forms['add-book'];
+
+            addForm.addEventListener('submit', function(e){
+              e.preventDefault();
+              const value = addForm.querySelector('input[type="text"]').value;
+              console.log(value);
+            });
