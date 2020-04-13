@@ -1,3 +1,6 @@
+document.addEventListener('DOMContentLoaded', function(){
+
+
 document.getEl ...    document is the whole html structure
 
 // good practice use :
