@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#">
+      <fieldset>
+        <legend>Welcome to our shope</legend>
+        <label for="ice-creams">
+          Choose a flavor :
+          <select name="" id="ice-creams">
+            <option value="#"> List of flowers ... </option>
+            <option value="chocolate"> chocolate </option>
+            <option value="vanilla"> vanilla </option>
+            <option value="strawberry"> strawberry </option>
+          </select>
+        </label>
+      </fieldset>
+    </form>
+    <br />
+
+    <!-- Typed in values  -->
+    <input placeholder="Enter some text" name="name" />
+    <p id="log"></p>
+    <!-- Typed in values to textarea  -->
+    <label for="story">Tell us your story:</label><br />
+    <textarea
+      id="story"
+      name="story"
+      rows="5"
+      cols="33"
+      placeholder="Comment text."
+    >
+    </textarea>
+    <script>
+      let a = document.querySelector("select");
+      a.addEventListener("change", (ev) => {
+        console.log(ev.target.value);
+      });
+      let p = document.querySelector("#log");
+      document.querySelector("input").addEventListener("change", (ev) => {
+        p.innerHTML = ev.target.value;
+      });
+
+
+      document.addEventListener('change', (ev)=>{
+        console.log(ev.target.value)
+        ev.target.value = '';
+      })
+
+// For more fun   https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>button-disable</title>
+  <style>
+   .hidden{
+     display: none;
+   }
+  </style>
+</head>
+<body>
+  <h3>What is your favorite pet?</h3>
+  <form>
+    <div>
+      <input type="radio" name="animals" id="dog" value="dog">
+      <label for="dog">Dog</label>
+      <input type="radio" name="animals" id="cat" value="cat">
+      <label for="cat">Cat</label>
+      <input type="radio" name="animals" id="fish" value="fish">
+      <label for="fish">Viktor the goldfish</label>
+    </div>
+  <div class="cat-facts" >
+    <label for="#">Do you want to sign up for cat facts?</label>
+  
+    <input type="radio" id="yes" name="question" value="yes" required > YES
+    <input type="radio" id="no" name="question"  value="no" required> NO
+  </div>
+
+  <div id="buttons" >
+    <button type="submit" class="hidden" id="love-cat"> I love cats </button>
+    <button type="submit" class="hidden" id="sign-up"> Sign up </button>
+  </div>
+  
+  </form>
+
+
+<script src="index.js"></script></body>
+</html>

@@ -1,0 +1,34 @@
+.payment-type label[for='visa'] {
+  background-image: url(assets/visa-logo.png);
+}
+.payment-type label[for='master-card'] {
+  background-image: url(assets/master.svg);
+}
+.payment-type label[for='paypal'] {
+  background-image: url(assets/paypal.svg);
+}
+
+.payment-type label {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  max-height: 70px; 
+ background-position: center center;
+ background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #002af6;
+  filter: grayscale(1);   /* it makes it  grey  later we can remove it  */
+  opacity: 0.7;
+  padding: 5px;
+  margin: auto 10px;
+  border-radius: 10px;
+}
+/* from the .pay... class   check for inputs witch has a type radio. If checked than change the label witch is after   */
+.payment-type input[type='radio']:checked+label{    
+  filter: none;
+  opacity: 1;
+}
+/* hide the radio buttons  */
+.payment-type input[type="radio"] {
+  display: none;
+}
