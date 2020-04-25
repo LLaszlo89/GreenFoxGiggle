@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  #container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    background-color: rgb(102, 0, 128);
+    color: ivory;
+    font-size: 50px;
+    align-items: center;
+    justify-self: center;
+
+  }
+  .left,.right {
+    background-color: yellow;
+    margin: 10px;
+
+  }
+  .centre {
+    background-color: greenyellow;
+    margin: 10px 0;
+
+  }
+  p{
+    display: grid;
+    justify-content: center;
+    padding: 50px;
+
+  }
+</style>
+  </head>
+  <body>
+    <div id="container">
+      <p class="left">Left</p>
+      <p class="centre">60 is my ratio</p>
+      <p class="right">Right</p>
+    </div>
+  </body>
+</html>
