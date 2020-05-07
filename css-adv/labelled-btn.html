@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/35c08f6169.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-color: grey;
+        display: grid;
+        height: 100vh;
+        margin: 0;
+
+        grid-template-columns: 1fr 300px 1fr;
+        grid-template-rows: 1fr 300px 1fr;
+      }
+      .container {
+        grid-area: 2/2/3/3;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content:space-around;
+      }
+      .img-background {
+        background-color: black;
+        font-size: 50px;
+        color: white;
+      }
+      i {
+        padding: 5.5px;
+      }
+
+      i[class*="trash"] {
+        padding: 8px;
+      }
+
+       .red:hover{
+        color: red;
+      } 
+      .red:hover:after{
+        content: "Delete";
+        color: white;
+        background-color: red;
+      }
+     
+
+      .green:hover {
+        color: green;
+      }
+      .green:hover::after {
+        content: "Sure?";
+        background-color: green;
+        color: white;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-background red">
+        <i class="far fa-trash-alt"></i>
+      </div>
+
+      <div class="img-background green">
+        <i class="fas fa-check"></i>
+      </div>
+    </div>
+  </body>
+  <script>
+    function Person(){
+
+    }
+    console.log(Person__proto__)
+  </script>
+</html>

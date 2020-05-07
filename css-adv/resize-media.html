@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+
+
+    
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        height: 100px;
+      }
+      .green {
+        background-color: green;
+        flex-grow: 1;
+        border: 3px solid rgba(0, 0, 0, 0.2);
+      }
+      .yellow {
+        background-color: yellow;
+        flex-grow: 2;
+        border: 5px solid rgba(0, 0, 0, 0.2);
+      }
+      .purple {
+        background-color: purple;
+        flex-grow: 1;
+        border: 3px solid rgba(0, 0, 0, 0.2);
+      }
+
+
+
+      @media all and (max-width: 600px){
+        .container {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+      }
+      .green {
+        background-color: green;
+        flex-grow: 1;
+        border: 3px solid rgba(0, 0, 0, 0.2);
+      }
+      .yellow {
+        background-color: yellow;
+        flex-grow: 1;
+        border: 5px solid rgba(0, 0, 0, 0.5);
+      }
+      .purple {
+        background-color: purple;
+        flex-grow: 1;
+        border: 3px solid rgba(0, 0, 0, 0.2);
+      }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="green"></div>
+      <div class="yellow"></div>
+      <div class="purple"></div>
+    </div>
+  </body>
+</html>

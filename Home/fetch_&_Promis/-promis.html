@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main"></div>
+  <script>
+/*     const fetchPromise = fetch("https://ghibliapi.herokuapp.com/people");
+    console.log(fetchPromise)  // Promise {<pending>}
+
+const main = document.querySelector(".main");
+
+    fetchPromise.then(res =>{    //console.log(res) ->  Response {type: "cors", url: "https://ghibliapi.herokuapp.com/people", redirected: false, status: 200, ok: true, …}
+      return res.json();
+     }).then(people =>{
+       //const names = people.map(person => person.name).join("\n");   // .join("\n")  making a list of them by adding linebreaks
+      main.innerHTML = listOfNames(people);
+     }) ;
+
+     function listOfNames(people){
+       const names = people.map(person => `<li>${person.name}</li>`).join("\n");
+       return `<ul>${names}</ul>`
+     } */
+     // CLEAN UP VERSION
+
+     const URL = "https://ghibliapi.herokuapp.com/people";
+
+     const main = document.querySelector('.main');
+     main.innerHTML = "<p> Loading..."
+
+     fetch(URL)
+     .then((res)=> res.json())
+     .then((people)=> main.innerHTML = listOFNames(people));
+
+
+     const listOFNames =(people)=>{
+       const names = people.map((person)=>`<li>${person.name}</li>`).join("\n"); // Without this its puts an ',' after each line  
+       return `<ul>${names}</ul>`
+     };
+  </script>
+</body>
+</html>
