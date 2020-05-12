@@ -1,6 +1,6 @@
 // requirements 
 const mysql = require('mysql');
-require('dotenv').config();
+require('dotenv').config();   //.env file required
 const conn = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
