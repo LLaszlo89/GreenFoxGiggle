@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<form>
+  <label for="genre"> genre</label>
+  <input type="text" name="i" id="genre">
+  <input type="submit" name="i" id="btn">
+</form>
+
+
+  <h1>list of something</h1>
+  <ul></ul>
+  <button>query</button>
+
+  <script>
+    let btn = document.querySelector("button")
+    let ul = document.querySelector("ul")
+    
+/* 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 */
+btn.addEventListener('click',(e)=>{
+  e.preventDefault();
+  fetch("http://127.0.0.1:3000/api")
+  .then(res=>res.json())
+  .then((data)=>{
+     data.forEach(e => {
+      let li = document.createElement("li")
+      li.innerHTML = e.title
+      ul.appendChild(li)
+    }); 
+    console.log(data)
+  })
+})
+
+/* --------------- */
+
+let form = document.querySelector("form").onclick=(e)=>{
+  e.preventDefault()
+  let send = { "title" : document.querySelector("#genre").value}
+
+fetch("http://127.0.0.1:3000/api", { 
+  method:"POST", 
+  headers:{"Content-Type":"application/json"}, 
+  body:JSON.stringify(send)})
+  .then(res=>res.json())
+  .then((data)=>{
+    console.log(data)
+  })
+
+  console.log(send)
+}
+
+
+
+  </script>
+</body>
+</html>
