@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <form id="drop-down">
+    <label for="size">Available sizes:</label>
+    <select name="t_shirts" id="size" > <!-- size="3" ->  sidebar added -->
+      <option value="">choose one</option>
+      <option value="L">L</option>
+      <option value="M">M</option>
+      <option value="S" disabled >S</option>    <!-- disable  its still in the list but cant be picked  -->
+    </select>
+    <input type="submit" value="please select first" style ="opacity: 0.5;">
+  </form>
+
+ <form id="textarea_form">
+   <div>
+     <label for="mssg"> Your comment comes here: </label>
+    </div>
+     <textarea name="comment" id="mssg" cols="30" rows="5"></textarea>
+   <input type="button" value="press" id="mssg_btn">
+ </form>
+  
+  <script>
+const dropdown = document.querySelector("#size");
+let btn = document.querySelector('input[type=submit]');
+
+document.onchange=(ev)=>{
+ev.preventDefault();
+
+btn.style.opacity=1;
+btn.value = "Now you can press" 
+activateBtn()
+let data ={ size: ev.target.value }
+console.log(data)
+}
+
+activateBtn=()=>{
+  btn.onclick=(ev)=>{
+  ev.preventDefault();
+alert("Now really im on🧨")
+}
+}
+
+
+  </script>
+</body>
+</html>

@@ -120,7 +120,7 @@
             Accept: "application/json, text/plain, */*",
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ title: title, body: body }),
+          body: JSON.stringify({ title: newTitle, body: newBody }),
         };
 
         fetch(url, method).then((data) => console.log(data));

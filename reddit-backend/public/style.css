@@ -1,0 +1,29 @@
+body{
+  background-color: lightgrey;
+  font-family: 'Lato', sans-serif;
+}
+
+header{
+  background-image: url(./assets/517453.jpg);
+height: 200px;
+width: 100vp;}
+
+main{
+background-color: white;
+}
+
+a{
+  text-decoration: none !important;
+  color:black;
+}
+
+#container li {
+  list-style: none;
+};
+
+.edit{
+  color: aqua;
+}
+.remove{
+  color: red;
+}

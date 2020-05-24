@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forms</title>
+</head>
+<body>
+<!--           FORMS       -->
+  <h1 class="result"></h1>
+  <form id="login">
+    <fieldset>
+      <legend>Now it looks better</legend>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+      </div><br>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <input type="submit"id="btn" value="Press">
+    </fieldset>
+  </form>
+
+<!--        Radio buttons       -->
+  <form id="witch">  
+    <label for="van"> vanilla</label>
+    <input type="radio" name="choose" id="van" name="flavor" value="vanilla">
+    <label for="cho"> chocolate</label>
+    <input type="radio" name="choose" id="cho" name="flavor" value="chocolate">
+    <label for="ban"> banana</label>
+    <input type="radio" name="choose" id="ban" name="flavor" value="banana">
+  </form>
+
+<!--      checkbox       -->
+  <form id="termsAndCon">
+      <label for="terms"> Read terms and conditions </label>
+      <input type="checkbox" id="terms"  >
+  </form>
+
+<script>
+/*            FORMS  script     */
+
+  let result = document.querySelector(".result");
+
+  document.querySelector("#login").addEventListener("submit", (ev)=>{
+     ev.preventDefault();
+     input()})
+
+  const input=()=>{
+    let toSend = {
+      name: document.querySelector("#name").value,
+      email: document.querySelector("#email").value
+    }
+    result.innerHTML= JSON.stringify(toSend.name);
+    console.log(toSend)
+  };
+
+/*        Radio buttons  script     */
+
+let forms = document.querySelectorAll("input[type=radio]")
+forms.forEach(e =>{
+  console.log(e.value)
+  e.onclick= ()=>{ 
+  result.innerHTML+= e.value 
+}
+})
+/*        checkbox script       */
+let box = document.querySelector("#terms").addEventListener("click", ()=>{
+  result.innerHTML+="✨"   
+})
+
+
+
+  </script>
+</body>
+</html>

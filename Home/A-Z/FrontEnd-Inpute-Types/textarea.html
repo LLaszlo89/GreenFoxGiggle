@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <form>
+    <textarea name="comment" id="text" cols="30" rows="10"></textarea>
+    <button type="button" id="btn">Press</button>
+  </form>
+<br><br>
+  <form> 
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+    
+  </form>
+  
+  <script>
+    document.querySelector("#btn").onclick=()=>{
+      let x = { "The mssg from the text area" :  document.querySelector("#text").value }
+      console.log(x)
+    }
+
+
+  </script>
+</body>
+</html>

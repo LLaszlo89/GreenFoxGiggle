@@ -1,0 +1,136 @@
+body{ 
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(219, 219, 219);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#container{
+  width: 150vh;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr) ;
+  grid-template-rows:repeat(6, 1fr) ;
+  box-shadow: 0px 13px 13px 4px rgba(0,0,0,0.75);
+  border-radius: 10px;
+/*   background-image: url(../assets/GIMS\ Maluma\ -\ Hola\ Señorita\ \(Maria\).jpg);
+ */  
+}
+
+.logo{
+  grid-area: 1/1/2/4;
+  margin: 3vh;
+}
+#container div p{
+  margin: 0;
+  padding: 3px;
+}
+.art{
+height: 120px;
+margin-top: 1em;
+border-radius: 3px;
+}
+.current{
+grid-area: 1/7/2/12;
+justify-content: center;
+}
+.signs{
+  grid-area: 1/12/2/14;
+  margin-top: 1.5em;
+}
+.playlist{
+  grid-area: 2/1/6/6;
+  background-color: rgb(199, 199, 199);
+  border: solid black 1px;
+  margin-left: 2vw;
+  overflow: auto;
+}
+
+
+.playlist i {
+font-size: 1em;
+margin-left: 20vw;
+}
+.playlist h2 {
+margin: 0;
+padding: 5px;
+
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 2px;
+
+}
+
+
+li:nth-of-type(odd) {
+  background-color:white;
+}
+
+.track{
+  grid-area: 2/6/6/last-line;
+  overflow: auto;
+}
+
+
+.buttons{
+  grid-area: 6/1/7/last-line;
+  display: flex;
+  justify-content: space-evenly;
+  background: none;
+border: 0;
+outline: 0;
+cursor: pointer;
+margin-top: 10px;
+padding-top: 5px;
+
+}
+.fas , .far{
+  font-size: 2em;
+
+}
+.skill-bar{
+  width: 50vw;
+  height: 10px;
+  background-color: lightslategray;
+}
+.inner-bar{
+width: 80%;
+height: 10px;
+background-color: greenyellow;
+
+}
+
+/* default settings */
+#play-pause:before{
+  content: "\f144";     /*   \  */
+font-family: "Font Awesome 5 Free";
+font-size: 2em;
+color: rgb(11, 165, 37);
+}
+
+/* if this has a class play -> change the content */
+#play-pause.play:before{
+  content: "\f144";
+}
+#play-pause.pause:before{
+  content: "\f28b";
+}
+
+
+/* good but what about the event listener?  select / delete
+.removable::after{
+content: '\f2ed';
+font-family: "Font Awesome 5 Free";
+padding: 5xp;
+color: darkred;
+
+} */
+
+.logo , li, i{cursor: pointer;}

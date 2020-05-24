@@ -3,12 +3,15 @@ const app = express();
 require("dotenv").config();
 const bodyParser = require("body-parser");
 const db = require("./db-connection");
+const cors = require('cors');
+const path =require('path');
 
 app.use(bodyParser.json()); 
+app.use(cors());
 
-app.get("/hello", (req, res) => {
-  res.send("Hello World");
-});
+app.use(express.static(path.join(__dirname, 'public' ))) 
+
+
 
 app.get("/posts", (req, res) => {
   db.query("SELECT * FROM new_post", (err, rows) => {
@@ -51,6 +54,10 @@ app.get("/posts/:id/downvote", (req, res) => {
   })
 });
 
+app.delete('/posts/:id', (req,res)=>{
+  
+  res.json({msg: `id to remove is: ${req.params.id}`})
+})
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running and listen to post: ${process.env.PORT}`);

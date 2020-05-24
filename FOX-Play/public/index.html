@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fox-Play</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/35c08f6169.js" crossorigin="anonymous"></script>
+  
+
+  </head>
+  <body>
+
+<div id="container">       
+    <div>
+      <img class="logo" src="../assets/foxplayer.png" alt="picture of the album" /><p class="mssg"></p>
+    </div>
+    <img class="art" src="../assets/music-placeholder.png"  />
+      
+  <span class="current">
+    <h1> currently played</h1>
+    <p>artist</p>
+  </span>
+
+  <span class="signs">
+    <i class="fas fa-plus"></i>
+    <i class="far fa-star"></i>
+  </span>
+
+
+  <div class="playlist list">
+    <h2>Playlist <i class="fas fa-plus playlistPlus"></i></h2>
+    <ul>
+      
+    </ul>
+  
+  </div>
+
+  <ul class="track list">
+  
+  </ul>
+        
+     
+<audio src="assets/Precious.mp3"></audio>
+
+ <div class="buttons">
+
+  <i class="fas fa-backward"></i>
+   <span id="play-pause" class="play"><!-- <i class="far fa-play-circle"> --></i></span>
+   <i class="fas fa-forward"></i>
+   <span class="time remaining">00:00</span>
+   <div class="skill-bar">
+     <div class="inner-bar"></div>
+   </div>
+   <span class="time total">00:00</span>
+   <i class="fas fa-random"></i>
+   <i class="fas fa-volume-mute"></i>
+
+  <input id="volume" type='range' min="0" max="10" value="5"/>
+ 
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
