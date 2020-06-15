@@ -52,16 +52,16 @@ let num = document.querySelector("#r_g").value;
 fetch(`http://127.0.0.1:3000/api/group?count=${num}`)
 .then(res=>res.json())
 .then((data)=>{
-  
   let o = data.groups;
   var result = chunkArray(o, num); 
-  console.log(result)
 
 result.forEach(e => {
+  let t = 0;
+  e.forEach(i => {
+    t++; 
+    console.log("groop number:" + t +""+ i.name)
 
-  window.document.
-  
+  });
 });
-
 })
 })
