@@ -1,0 +1,30 @@
+
+html, 
+body {
+    height: 100%;
+}
+
+img{
+  height: 15em;
+ 
+}
+.container{
+display: grid;
+
+
+grid-template-areas: "a b c" "d e f"
+}
+
+.container div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 15em;
+}
+
+.ant-pagination{
+
+  
+
+}
